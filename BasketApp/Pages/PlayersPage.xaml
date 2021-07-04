@@ -26,14 +26,23 @@
             <Setter Property="FontFamily" Value="Calibri"/>
             <Setter Property="BorderBrush" Value="#FF6995C2"/>
         </Style>
+        <Style TargetType="Button" x:Key="PaginationButton">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#FF6995C2"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="BorderBrush" Value="White"/>
+        </Style>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="11*"/>
-            <RowDefinition Height="64*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="348*"/>
+            <RowDefinition Height="31*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="1" Background="{StaticResource MainBlue}" Orientation="Vertical">
+        <StackPanel Grid.Row="1" Background="{StaticResource MainBlue}" Orientation="Vertical" Margin="0,1,0,11" Grid.RowSpan="2">
             <WrapPanel x:Name="Alphabet">
                 <Button Style="{StaticResource BlueButton}" Content="ALL"></Button>
                 <Button Style="{StaticResource BlueButton}" Content="A"></Button>
@@ -73,7 +82,7 @@
                 <TextBox></TextBox>
             </UniformGrid>
         </StackPanel>
-        <DataGrid Grid.Row="2" Name="GridPlayers" AutoGenerateColumns="True">
+        <DataGrid Grid.Row="2" Grid.RowSpan="2" Name="GridPlayers" AutoGenerateColumns="True">
             <!--<DataGrid.Columns>
                 <DataGridTemplateColumn Header="Photo"></DataGridTemplateColumn>
                 <DataGridTextColumn Header="No."></DataGridTextColumn>
@@ -86,5 +95,13 @@
                 <DataGridTextColumn Header="Country"></DataGridTextColumn>
             </DataGrid.Columns>-->
         </DataGrid>
+        <StackPanel Grid.Row="4" x:Name="PaginationPanel" Orientation="Horizontal">
+            <Button Style="{StaticResource PaginationButton}" Content="&lt;&lt;"></Button>
+            <Button Style="{StaticResource PaginationButton}" Content="&lt;"></Button>
+            <TextBox x:Name="CurrentPageNumber" Width="50" Height="20"></TextBox>
+            <Label FontSize="8" Height="20">of 6</Label>
+            <Button Style="{StaticResource PaginationButton}" Content="&gt;"></Button>
+            <Button Style="{StaticResource PaginationButton}" Content="&gt;&gt;"></Button>
+        </StackPanel>
     </Grid>
 </Page>
