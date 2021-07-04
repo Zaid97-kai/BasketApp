@@ -25,6 +25,10 @@ namespace BasketApp.Pages
         {
             InitializeComponent();
             mainWindow.LabelHeader.Content = "NBA Managment Studio";
+            mainWindow.LabelNBAMS.Content = "";
+            //mainWindow.Header.Height *= 2;
+            //mainWindow.LogoImg.Width *= 2;
+            //mainWindow.LogoImg.Height *= 2;
         }
 
         private void ButtonVisitor_Click(object sender, RoutedEventArgs e)
