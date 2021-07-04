@@ -29,11 +29,11 @@
 
         <Border Grid.Row="2">
             <StackPanel Orientation="Horizontal" >
-                <Button Content="&lt;" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Margin="20" BorderBrush="White" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                <Button Content="&lt;" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Margin="20" BorderBrush="White" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF818181"></Button>
                 <Image x:Name="FirstImage" Source="/Resources/DefaultPicture.PNG" Margin="40 40 20 40" ></Image>
                 <Image x:Name="SecondImage" Source="/Resources/DefaultPicture.PNG" Margin="20 40 20 40"></Image>
                 <Image x:Name="ThirdImage" Source="/Resources/DefaultPicture.PNG" Margin="20 40 40 40"></Image>
-                <Button Content="&gt;" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Right" Background="White" BorderBrush="White"></Button>
+                <Button Content="&gt;" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Right" Background="White" BorderBrush="White" Foreground="#FF818181"></Button>
             </StackPanel>
         </Border>
     </Grid>
