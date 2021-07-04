@@ -13,23 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BasketApp
+namespace BasketApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MatchupList.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MatchupList : Page
     {
-        public MainWindow()
+        public MatchupList()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Pages.PlayerMain());
-        }
-
-        private void ButtonClicked(object sender, RoutedEventArgs e)
-        {
-            //ButtonSecond.Content = "Hello, World!";
-            //ButtonSecond.Background = Brushes.Cyan;
         }
     }
 }

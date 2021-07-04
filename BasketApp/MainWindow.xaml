@@ -31,6 +31,9 @@
                 </Button.Resources>
             </Button>
         </Grid>
+        <Frame x:Name="MainFrame" Grid.Row="1">
+            
+        </Frame>
         <Grid x:Name="Footer" Grid.Row="2" Background="#FF6995C2">
             <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="140*"/>

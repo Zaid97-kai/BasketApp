@@ -68,8 +68,36 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\ManagmentSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MatchupList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlayerMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VisitorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\ManagmentSystem.xaml.cs">
+      <DependentUpon>ManagmentSystem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MatchupList.xaml.cs">
+      <DependentUpon>MatchupList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlayerMain.xaml.cs">
+      <DependentUpon>PlayerMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VisitorMenu.xaml.cs">
+      <DependentUpon>VisitorMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
