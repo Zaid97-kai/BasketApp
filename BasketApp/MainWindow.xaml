@@ -23,7 +23,7 @@
                 <Label x:Name="LabelNBAMS" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" FontSize="16">NBA Managment System</Label>
             </StackPanel>
             <Label x:Name="LabelHeader" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20" >HEADER</Label>
-            <Button Content="Back" HorizontalAlignment="Right" VerticalAlignment="Center" Width="60" Height="30" Margin="45,25" Panel.ZIndex="1">
+            <Button Name="BackButton" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Center" Width="60" Height="30" Margin="45,25" Panel.ZIndex="1" Click="Button_Click" Visibility="Visible">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -31,7 +31,7 @@
                 </Button.Resources>
             </Button>
         </Grid>
-        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden">
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered">
 
         </Frame>
         <Grid x:Name="Footer" Grid.Row="2" Background="#FF6995C2">

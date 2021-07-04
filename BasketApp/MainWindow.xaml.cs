@@ -32,5 +32,25 @@ namespace BasketApp
             //ButtonSecond.Content = "Hello, World!";
             //ButtonSecond.Background = Brushes.Cyan;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e) //Button "Back"
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+        }
+
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                BackButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BackButton.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }
