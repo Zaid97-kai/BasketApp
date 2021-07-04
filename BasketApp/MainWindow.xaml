@@ -5,14 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BasketApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="NBA" Height="800" Width="1200" WindowStartupLocation="CenterScreen" MinHeight="400" MinWidth="600">
     <Grid>
-        <StackPanel Orientation="Horizontal">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="640*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <!--<StackPanel Orientation="Horizontal">
             <Label HorizontalAlignment="Left" VerticalAlignment="Top">TextTextText:</Label>
             <TextBox Background="Bisque" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150"></TextBox>
         </StackPanel>
         <Button Content="Добавить" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Background="#FFF3BF4E" Click="ButtonClicked"/>
         <Button x:Name="ButtonSecond" Content="Назад" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                Background="AliceBlue" FontFamily="Comic Sans MS" FontSize="14" FontStretch="Expanded" FontWeight="Black"/>
+                Background="AliceBlue" FontFamily="Comic Sans MS" FontSize="14" FontStretch="Expanded" FontWeight="Black"/>-->
     </Grid>
 </Window>
