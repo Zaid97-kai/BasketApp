@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="81,320,0,0" VerticalAlignment="Top" Width="75" Background="Pink"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="360,310,0,0" VerticalAlignment="Top" Width="75" Background="LightGray"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="360,0,0,36" VerticalAlignment="Bottom" Width="75" Background="AliceBlue"/>
 
     </Grid>
 </Window>
