@@ -27,8 +27,8 @@ namespace BasketApp
 
         private void ButtonClicked(object sender, RoutedEventArgs e)
         {
-            ButtonSecond.Content = "Hello, World!";
-            ButtonSecond.Background = Brushes.Cyan;
+            //ButtonSecond.Content = "Hello, World!";
+            //ButtonSecond.Background = Brushes.Cyan;
         }
     }
 }

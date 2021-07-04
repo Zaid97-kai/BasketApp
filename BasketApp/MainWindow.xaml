@@ -32,8 +32,15 @@
         <Label Background="Orange" Grid.Row="3" Grid.Column="2"/>
         <TextBox Background="GreenYellow"></TextBox>
     </UniformGrid>-->
-    <StackPanel Orientation="Vertical">
+    <!--<StackPanel Orientation="Vertical">
         <Button Background="Aqua" Height="50"></Button>
         <Button Background="Bisque" Height="80"></Button>
-    </StackPanel>
+    </StackPanel>-->
+    <WrapPanel>
+        <Button Width="200" Height="160"></Button>
+        <Button Width="100" Height="60"></Button>
+        <Button Width="100" Height="80"></Button>
+        <Button Width="100" Height="60"></Button>
+        <Button Width="400" Height="100"></Button>
+    </WrapPanel>
 </Window>
