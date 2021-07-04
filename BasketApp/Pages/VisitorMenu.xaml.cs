@@ -26,5 +26,24 @@ namespace BasketApp.Pages
             InitializeComponent();
             mainWindow.SecondFooterLabelInfo.Content = 2;
         }
+        private void TeamsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Эта функция будет реализована позднее!");
+        }
+
+        private void MatchupsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Эта функция будет реализована позднее!");
+        }
+
+        private void PlayersButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Эта функция будет реализована позднее!");
+        }
+
+        private void PhotosButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Эта функция будет реализована позднее!");
+        }
     }
 }
