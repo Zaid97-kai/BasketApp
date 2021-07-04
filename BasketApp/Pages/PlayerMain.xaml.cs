@@ -24,5 +24,15 @@ namespace BasketApp.Pages
         {
             InitializeComponent();
         }
+
+        private void ButtonVisitor_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.VisitorMenu());
+        }
+        
+        private void ButtonAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Эта функция будет реализована позднее!");
+        }
     }
 }

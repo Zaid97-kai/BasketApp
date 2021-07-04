@@ -6,9 +6,24 @@
       xmlns:local="clr-namespace:BasketApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PlayerMain" Background="AntiqueWhite">
+      Title="PlayerMain" Height="640" Width="1200" Background="White">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="159*"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" FontFamily="Calibri" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Welcome to use this NBA Managment System, you can redirect to different pages according to your role by clicking the buttons bellow.</Label>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="ButtonVisitor" Content="Visitor" Background="#FF6995C2" Foreground="White" Click="ButtonVisitor_Click" 
+                    HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="190" Height="75" 
+                    FontSize="16" FontFamily="Calibri">
+            </Button>
+            <Button x:Name="ButtonAdmin" Content="Admin" Background="#FF6995C2" Foreground="White" Click="ButtonAdmin_Click"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" Width="190" Height="75" 
+                    FontFamily="Calibri" FontSize="16"></Button>
+        </StackPanel>
     </Grid>
 </Page>
