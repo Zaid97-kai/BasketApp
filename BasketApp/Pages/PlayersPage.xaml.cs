@@ -37,24 +37,24 @@ namespace BasketApp.Pages
             InitializeComponent();
 
             NBAShort_08Entities context = new NBAShort_08Entities();
-            //GridPlayers.ItemsSource = context.Player.ToList();
-            List<TempPlayer> tempPlayers = new List<TempPlayer>();
-            foreach (Player item in context.Player)
-            {
-                tempPlayers.Add(new TempPlayer
-                {
-                    Img = item.Img,
-                    PlayerId = item.PlayerId,
-                    Name = item.Name,
-                    Position = item.Position.Name,
-                    Weight = item.Weight,
-                    Height = item.Height,
-                    JoinYear = item.JoinYear,
-                    Country = item.Country.CountryName,
-                    CountryCode = item.CountryCode
-                });
-            }
-            GridPlayers.ItemsSource = tempPlayers;
+            GridPlayers.ItemsSource = context.Player.ToList();
+            //List<TempPlayer> tempPlayers = new List<TempPlayer>();
+            //foreach (Player item in context.Player)
+            //{
+            //    tempPlayers.Add(new TempPlayer
+            //    {
+            //        Img = item.Img,
+            //        PlayerId = item.PlayerId,
+            //        Name = item.Name,
+            //        Position = item.Position.Name,
+            //        Weight = item.Weight,
+            //        Height = item.Height,
+            //        JoinYear = item.JoinYear,
+            //        Country = item.Country.CountryName,
+            //        CountryCode = item.CountryCode
+            //    });
+            //}
+            //GridPlayers.ItemsSource = tempPlayers;
         }
     }
 }

@@ -43,7 +43,7 @@
             <RowDefinition Height="348*"/>
             <RowDefinition Height="31*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="1" Background="{StaticResource MainBlue}" Orientation="Vertical" Margin="0,1,0,11" Grid.RowSpan="2">
+        <StackPanel Grid.Row="1" Background="{StaticResource MainBlue}" Orientation="Vertical">
             <WrapPanel x:Name="Alphabet">
                 <Button Style="{StaticResource BlueButton}" Content="ALL"></Button>
                 <Button Style="{StaticResource BlueButton}" Content="A"></Button>
@@ -83,18 +83,24 @@
                 <TextBox></TextBox>
             </UniformGrid>
         </StackPanel>
-        <DataGrid Grid.Row="2" Grid.RowSpan="2" Name="GridPlayers" AutoGenerateColumns="True">
-            <!--<DataGrid.Columns>
-                <DataGridTemplateColumn Header="Photo"></DataGridTemplateColumn>
+        <DataGrid Grid.Row="3" Name="GridPlayers" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Photo">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Img}"></Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn Header="No."></DataGridTextColumn>
-                <DataGridTextColumn Header="Name"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Team"></DataGridTextColumn>
                 <DataGridTextColumn Header="Position"></DataGridTextColumn>
-                <DataGridTextColumn Header="Weight"></DataGridTextColumn>
+                <DataGridTextColumn Header="Weight" Binding="{Binding Weight}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Height"></DataGridTextColumn>
                 <DataGridTextColumn Header="Experience"></DataGridTextColumn>
-                <DataGridTextColumn Header="Country"></DataGridTextColumn>
-            </DataGrid.Columns>-->
+                <DataGridTextColumn Header="Country" Binding="{Binding Country.CountryName}"></DataGridTextColumn>
+            </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="4" x:Name="PaginationPanel" Orientation="Horizontal" Margin="40 0 0 0">
             <Button Style="{StaticResource PaginationButton}" Content="&lt;&lt;"></Button>
