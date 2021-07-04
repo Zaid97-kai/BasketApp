@@ -23,6 +23,7 @@ namespace BasketApp
         public MainWindow()
         {
             InitializeComponent();
+            Pages.PlayerMain.mainWindow = this;
             MainFrame.Navigate(new Pages.PlayerMain());
         }
 

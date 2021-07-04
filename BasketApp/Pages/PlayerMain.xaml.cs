@@ -20,9 +20,11 @@ namespace BasketApp.Pages
     /// </summary>
     public partial class PlayerMain : Page
     {
+        static public MainWindow mainWindow;
         public PlayerMain()
         {
             InitializeComponent();
+            mainWindow.LabelHeader.Content = "NBA Managment Studio";
         }
 
         private void ButtonVisitor_Click(object sender, RoutedEventArgs e)
