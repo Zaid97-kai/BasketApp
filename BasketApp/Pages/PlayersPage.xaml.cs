@@ -23,6 +23,9 @@ namespace BasketApp.Pages
         public PlayersPage()
         {
             InitializeComponent();
+
+            NBAShort_08Entities context = new NBAShort_08Entities();
+            GridPlayers.ItemsSource = context.Player.ToList();
         }
     }
 }

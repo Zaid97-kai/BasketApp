@@ -72,8 +72,9 @@
                 <Label Style="{StaticResource BlueLabel}" Content="PlayerName:" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
                 <TextBox></TextBox>
             </UniformGrid>
-            <DataGrid>
-                <DataGrid.Columns>
+        </StackPanel>
+            <DataGrid Name="GridPlayers" AutoGenerateColumns="True">
+                <!--<DataGrid.Columns>
                     <DataGridTemplateColumn Header="Photo"></DataGridTemplateColumn>
                     <DataGridTextColumn Header="No."></DataGridTextColumn>
                     <DataGridTextColumn Header="Name"></DataGridTextColumn>
@@ -83,8 +84,7 @@
                     <DataGridTextColumn Header="Height"></DataGridTextColumn>
                     <DataGridTextColumn Header="Experience"></DataGridTextColumn>
                     <DataGridTextColumn Header="Country"></DataGridTextColumn>
-                </DataGrid.Columns>
+                </DataGrid.Columns>-->
             </DataGrid>
-        </StackPanel>
     </Grid>
 </Page>
