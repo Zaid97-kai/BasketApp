@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Добавить" HorizontalAlignment="Left" Margin="360,310,0,0" VerticalAlignment="Top" Width="75" Background="LightGray"/>
-        <Button Content="Назад" HorizontalAlignment="Left" Margin="360,0,0,36" VerticalAlignment="Bottom" Width="75" Background="AliceBlue"/>
+        <Button Content="Добавить" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Background="#FFF3BF4E" Click="ButtonClicked"/>
+        <Button x:Name="ButtonSecond" Content="Назад" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                Background="AliceBlue" FontFamily="Comic Sans MS" FontSize="14" FontStretch="Expanded" FontWeight="Black"/>
 
     </Grid>
 </Window>
