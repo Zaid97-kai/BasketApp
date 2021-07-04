@@ -38,7 +38,7 @@ namespace BasketApp.Pages
 
         private void PlayersButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Эта функция будет реализована позднее!");
+            NavigationService.Navigate(new Pages.PlayersPage());
         }
 
         private void PhotosButton_Click(object sender, RoutedEventArgs e)

@@ -6,9 +6,60 @@
       xmlns:local="clr-namespace:BasketApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PlayersPage" Background="White">
-
+      Title="PlayersPage" Height="640" Width="1200" MinHeight="320" MinWidth="600" Background="White">
+    <Page.Resources>
+        <SolidColorBrush x:Key="MainBlue">
+            #FF6995C2
+        </SolidColorBrush>
+        <Style TargetType="Button" x:Key="BlueButton">
+            <Setter Property="Background" Value="#FF6995C2"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="BorderBrush" Value="#FF6995C2"/>
+            <Setter Property="Margin" Value="10 10 0 0"/>
+        </Style>
+    </Page.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="{StaticResource MainBlue}" Orientation="Horizontal" Margin="0 40 0 0">
+            <WrapPanel x:Name="Alphabet">
+                <Button Style="{StaticResource BlueButton}" Content="ALL"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="A"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="B"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="C"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="D"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="E"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="F"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="G"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="H"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="I"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="J"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="K"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="L"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="M"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="M"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="M"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="N"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="O"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="P"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="R"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="S"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="T"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="U"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="V"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="W"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="X"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="Y"></Button>
+                <Button Style="{StaticResource BlueButton}" Content="Z"></Button>
+            </WrapPanel>
+            <UniformGrid>
+                
+            </UniformGrid>
+        </StackPanel>
     </Grid>
 </Page>
