@@ -19,6 +19,13 @@
             <Setter Property="BorderBrush" Value="#FF6995C2"/>
             <Setter Property="Margin" Value="10 10 0 0"/>
         </Style>
+        <Style TargetType="Label" x:Key="BlueLabel">
+            <Setter Property="Background" Value="#FF6995C2"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="BorderBrush" Value="#FF6995C2"/>
+        </Style>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -26,7 +33,7 @@
             <RowDefinition Height="40*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Background="{StaticResource MainBlue}" Orientation="Horizontal" Margin="0 40 0 0">
+        <StackPanel Background="{StaticResource MainBlue}" Orientation="Vertical" Margin="0 40 0 0">
             <WrapPanel x:Name="Alphabet">
                 <Button Style="{StaticResource BlueButton}" Content="ALL"></Button>
                 <Button Style="{StaticResource BlueButton}" Content="A"></Button>
@@ -57,9 +64,27 @@
                 <Button Style="{StaticResource BlueButton}" Content="Y"></Button>
                 <Button Style="{StaticResource BlueButton}" Content="Z"></Button>
             </WrapPanel>
-            <UniformGrid>
-                
+            <UniformGrid Rows="1" Columns="6">
+                <Label Style="{StaticResource BlueLabel}" Content="Season:" HorizontalAlignment="Right"></Label>
+                <ComboBox></ComboBox>
+                <Label Style="{StaticResource BlueLabel}" Content="Team:" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+                <ComboBox></ComboBox>
+                <Label Style="{StaticResource BlueLabel}" Content="PlayerName:" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+                <TextBox></TextBox>
             </UniformGrid>
+            <DataGrid>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Photo"></DataGridTemplateColumn>
+                    <DataGridTextColumn Header="No."></DataGridTextColumn>
+                    <DataGridTextColumn Header="Name"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Team"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Position"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Weight"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Height"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Experience"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Country"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
     </Grid>
 </Page>
