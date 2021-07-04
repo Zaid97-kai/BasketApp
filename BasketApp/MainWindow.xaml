@@ -6,10 +6,26 @@
         xmlns:local="clr-namespace:BasketApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <!--<Grid>
         <Button Content="Добавить" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Background="#FFF3BF4E" Click="ButtonClicked"/>
         <Button x:Name="ButtonSecond" Content="Назад" HorizontalAlignment="Center" VerticalAlignment="Bottom"
                 Background="AliceBlue" FontFamily="Comic Sans MS" FontSize="14" FontStretch="Expanded" FontWeight="Black"/>
-
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top">TextTextText:</Label>
+        <TextBox Background="Bisque" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150"></TextBox>
+    </Grid>-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="437*"/>
+            <ColumnDefinition Width="196*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="122*"/>
+            <RowDefinition Height="56*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"></Button>
     </Grid>
 </Window>
