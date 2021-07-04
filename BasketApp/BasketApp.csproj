@@ -68,15 +68,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\ManagmentSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MatchupList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\MainScreen.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PlayersPage.xaml">
+    <Page Include="Pages\PlayerMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,14 +86,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\ManagmentSystem.xaml.cs">
+      <DependentUpon>ManagmentSystem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MatchupList.xaml.cs">
       <DependentUpon>MatchupList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MainScreen.xaml.cs">
-      <DependentUpon>MainScreen.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PlayersPage.xaml.cs">
-      <DependentUpon>PlayersPage.xaml</DependentUpon>
+    <Compile Include="Pages\PlayerMain.xaml.cs">
+      <DependentUpon>PlayerMain.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\VisitorMenu.xaml.cs">
       <DependentUpon>VisitorMenu.xaml</DependentUpon>

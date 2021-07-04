@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BasketApp"
         mc:Ignorable="d"
-        Title="{Binding ElementName=MainFrame, Path=Content.Title}" Height="800" Width="1200" WindowStartupLocation="CenterScreen" MinHeight="400" MinWidth="600">
+        Title="NBA" Height="800" Width="1200" WindowStartupLocation="CenterScreen" MinHeight="400" MinWidth="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -34,7 +34,7 @@
                 <ColumnDefinition Width="521*"/>
                 <ColumnDefinition Width="75*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="FirstFooterLabelInfo" Grid.ColumnSpan="2" Content="The current season in 2016-2017, and the NBA already has a history of" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" FontSize="16"></Label>
+            <Label x:Name="FirstFooterLabelInfo" Content="The current season in 2016-2017, and the NBA already has a history of" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" FontSize="16"></Label>
             <Label x:Name="SecondFooterLabelInfo" Content="#" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" FontSize="16" Height="30" Margin="62,10,70,10" Width="18"></Label>
         </Grid>
 

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace BasketApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PlayersPage.xaml
+    /// Логика взаимодействия для ManagmentSystem.xaml
     /// </summary>
-    public partial class PlayersPage : Page
+    public partial class ManagmentSystem : Page
     {
-        public PlayersPage()
+        public ManagmentSystem()
         {
             InitializeComponent();
         }
