@@ -32,6 +32,7 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="Calibri"/>
             <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Height" Value="20"/>
         </Style>
     </Page.Resources>
     <Grid>
@@ -95,11 +96,11 @@
                 <DataGridTextColumn Header="Country"></DataGridTextColumn>
             </DataGrid.Columns>-->
         </DataGrid>
-        <StackPanel Grid.Row="4" x:Name="PaginationPanel" Orientation="Horizontal">
+        <StackPanel Grid.Row="4" x:Name="PaginationPanel" Orientation="Horizontal" Margin="40 0 0 0">
             <Button Style="{StaticResource PaginationButton}" Content="&lt;&lt;"></Button>
             <Button Style="{StaticResource PaginationButton}" Content="&lt;"></Button>
             <TextBox x:Name="CurrentPageNumber" Width="50" Height="20"></TextBox>
-            <Label FontSize="8" Height="20">of 6</Label>
+            <Label FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center">of 6</Label>
             <Button Style="{StaticResource PaginationButton}" Content="&gt;"></Button>
             <Button Style="{StaticResource PaginationButton}" Content="&gt;&gt;"></Button>
         </StackPanel>
