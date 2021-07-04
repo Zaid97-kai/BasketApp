@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:BasketApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PlayersPage" Height="640" Width="1200" MinHeight="320" MinWidth="600" Background="White">
+      Title="PlayersPage" Background="White">
     <Page.Resources>
         <SolidColorBrush x:Key="MainBlue">
             #FF6995C2
@@ -14,7 +14,7 @@
         <Style TargetType="Button" x:Key="BlueButton">
             <Setter Property="Background" Value="#FF6995C2"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="Calibri"/>
             <Setter Property="BorderBrush" Value="#FF6995C2"/>
             <Setter Property="Margin" Value="10 10 0 0"/>
@@ -22,18 +22,18 @@
         <Style TargetType="Label" x:Key="BlueLabel">
             <Setter Property="Background" Value="#FF6995C2"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="Calibri"/>
             <Setter Property="BorderBrush" Value="#FF6995C2"/>
         </Style>
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="40*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="64*"/>
         </Grid.RowDefinitions>
-
-        <StackPanel Background="{StaticResource MainBlue}" Orientation="Vertical" Margin="0 40 0 0">
+        <StackPanel Grid.Row="1" Background="{StaticResource MainBlue}" Orientation="Vertical">
             <WrapPanel x:Name="Alphabet">
                 <Button Style="{StaticResource BlueButton}" Content="ALL"></Button>
                 <Button Style="{StaticResource BlueButton}" Content="A"></Button>
@@ -64,7 +64,7 @@
                 <Button Style="{StaticResource BlueButton}" Content="Y"></Button>
                 <Button Style="{StaticResource BlueButton}" Content="Z"></Button>
             </WrapPanel>
-            <UniformGrid Rows="1" Columns="6">
+            <UniformGrid Rows="1" Columns="8">
                 <Label Style="{StaticResource BlueLabel}" Content="Season:" HorizontalAlignment="Right"></Label>
                 <ComboBox></ComboBox>
                 <Label Style="{StaticResource BlueLabel}" Content="Team:" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
@@ -73,18 +73,18 @@
                 <TextBox></TextBox>
             </UniformGrid>
         </StackPanel>
-            <DataGrid Name="GridPlayers" AutoGenerateColumns="True">
-                <!--<DataGrid.Columns>
-                    <DataGridTemplateColumn Header="Photo"></DataGridTemplateColumn>
-                    <DataGridTextColumn Header="No."></DataGridTextColumn>
-                    <DataGridTextColumn Header="Name"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Team"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Position"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Weight"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Height"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Experience"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Country"></DataGridTextColumn>
-                </DataGrid.Columns>-->
-            </DataGrid>
+        <DataGrid Grid.Row="2" Name="GridPlayers" AutoGenerateColumns="True">
+            <!--<DataGrid.Columns>
+                <DataGridTemplateColumn Header="Photo"></DataGridTemplateColumn>
+                <DataGridTextColumn Header="No."></DataGridTextColumn>
+                <DataGridTextColumn Header="Name"></DataGridTextColumn>
+                <DataGridTextColumn Header="Team"></DataGridTextColumn>
+                <DataGridTextColumn Header="Position"></DataGridTextColumn>
+                <DataGridTextColumn Header="Weight"></DataGridTextColumn>
+                <DataGridTextColumn Header="Height"></DataGridTextColumn>
+                <DataGridTextColumn Header="Experience"></DataGridTextColumn>
+                <DataGridTextColumn Header="Country"></DataGridTextColumn>
+            </DataGrid.Columns>-->
+        </DataGrid>
     </Grid>
 </Page>
