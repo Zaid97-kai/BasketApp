@@ -22,7 +22,7 @@
                 <Image x:Name="LogoImg" HorizontalAlignment="Left" Source="/Resources/logo.jpg" />
                 <Label x:Name="LabelNBAMS" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" FontSize="16">NBA Managment System</Label>
             </StackPanel>
-            <Label HorizontalAlignment="Center" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center">HEADER</Label>
+            <Label HorizontalAlignment="Center" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" FontSize="20">HEADER</Label>
             <Button Content="Back" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center" Width="60" Height="30">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -31,6 +31,17 @@
                 </Button.Resources>
             </Button>
         </Grid>
+        <Grid Grid.Row="2" Background="#FF6995C2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140*"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="The current season in 2016-2017, and the NBA already has a history of" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" FontSize="16"></Label>
+                <Label Content="#" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" FontSize="16"></Label>
+            </Grid>
+        </Grid>
+        
         <!--<Button Background="AliceBlue" Grid.Row="0"></Button>
         <Button Background="Black" Grid.Row="2"></Button>-->
         <!--<StackPanel Orientation="Horizontal">
