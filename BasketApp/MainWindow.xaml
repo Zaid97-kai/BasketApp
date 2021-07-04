@@ -13,16 +13,11 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid x:Name="Header" Grid.Row="0">
-            <!--<Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="801*"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>-->
-            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="225">
-                <Image x:Name="LogoImg" HorizontalAlignment="Left" Source="/Resources/logo.jpg" />
-                <Label x:Name="LabelNBAMS" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" FontSize="16">NBA Managment System</Label>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                <Image x:Name="LogoImg" Source="/Resources/logo.jpg" />
+                <Label x:Name="LabelNBAMS" FontSize="16" Content="NBA Managment System"></Label>
             </StackPanel>
-            <Label x:Name="LabelHeader" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20" >HEADER</Label>
+            <Label x:Name="LabelHeader" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="20" Content="{Binding ElementName=MainFrame, Path=Content.Title}"></Label>
             <Button Name="BackButton" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Center" Width="60" Height="30" Margin="45,25" Panel.ZIndex="1" Click="Button_Click" Visibility="Visible">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -39,8 +34,8 @@
                 <ColumnDefinition Width="521*"/>
                 <ColumnDefinition Width="75*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="FooterLabelInfo" Content="The current season in 2016-2017, and the NBA already has a history of" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" FontSize="16"></Label>
-            <Label Content="#" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" FontSize="16" Height="30" Margin="62,10,70,10" Width="18"></Label>
+            <Label x:Name="FirstFooterLabelInfo" Content="The current season in 2016-2017, and the NBA already has a history of" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" FontSize="16"></Label>
+            <Label x:Name="SecondFooterLabelInfo" Content="#" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" FontSize="16" Height="30" Margin="62,10,70,10" Width="18"></Label>
         </Grid>
 
         <!--<Button Background="AliceBlue" Grid.Row="0"></Button>

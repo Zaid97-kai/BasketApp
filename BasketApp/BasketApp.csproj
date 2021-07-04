@@ -133,7 +133,7 @@
     <Resource Include="Resources\person.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DefaultPicture.PNG" />
+    <Resource Include="Resources\DefaultPicture.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

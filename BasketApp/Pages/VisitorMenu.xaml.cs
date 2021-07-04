@@ -20,9 +20,11 @@ namespace BasketApp.Pages
     /// </summary>
     public partial class VisitorMenu : Page
     {
+        static public MainWindow mainWindow;
         public VisitorMenu()
         {
             InitializeComponent();
+            mainWindow.SecondFooterLabelInfo.Content = 2;
         }
     }
 }

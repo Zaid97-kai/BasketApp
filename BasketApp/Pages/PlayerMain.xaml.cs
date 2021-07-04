@@ -24,15 +24,14 @@ namespace BasketApp.Pages
         public PlayerMain()
         {
             InitializeComponent();
-            mainWindow.LabelHeader.Content = "NBA Managment Studio";
-            mainWindow.LabelNBAMS.Content = "";
-            //mainWindow.Header.Height *= 2;
-            //mainWindow.LogoImg.Width *= 2;
-            //mainWindow.LogoImg.Height *= 2;
+            //mainWindow.LabelHeader.Content = "NBA Managment Studio";
+            //mainWindow.LabelNBAMS.Content = "";
+            mainWindow.SecondFooterLabelInfo.Content = 1;
         }
 
         private void ButtonVisitor_Click(object sender, RoutedEventArgs e)
         {
+            VisitorMenu.mainWindow = mainWindow;
             NavigationService.Navigate(new Pages.VisitorMenu());
         }
         

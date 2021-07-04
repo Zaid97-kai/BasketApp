@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:BasketApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="NBA" Height="640" Width="1200" MinHeight="320" MinWidth="600" Background="White">
+      Title="Visitor Menu" Height="640" Width="1200" MinHeight="320" MinWidth="600" Background="White">
     <Grid>
         <Grid Width="1000" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>
