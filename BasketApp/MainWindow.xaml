@@ -13,7 +13,7 @@
         <Label HorizontalAlignment="Left" VerticalAlignment="Top">TextTextText:</Label>
         <TextBox Background="Bisque" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150"></TextBox>
     </Grid>-->
-    <Grid>
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="159*"/>
             <ColumnDefinition Width="437*"/>
@@ -27,5 +27,9 @@
             <RowDefinition Height="56*"/>
         </Grid.RowDefinitions>
         <Button Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"></Button>
-    </Grid>
+    </Grid>-->
+    <UniformGrid Rows="4" Columns="4">
+        <Label Background="Orange" Grid.Row="3" Grid.Column="2"/>
+        <TextBox Background="GreenYellow"></TextBox>
+    </UniformGrid>
 </Window>
