@@ -6,41 +6,13 @@
         xmlns:local="clr-namespace:BasketApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <!--<Grid>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top">TextTextText:</Label>
+            <TextBox Background="Bisque" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150"></TextBox>
+        </StackPanel>
         <Button Content="Добавить" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Background="#FFF3BF4E" Click="ButtonClicked"/>
         <Button x:Name="ButtonSecond" Content="Назад" HorizontalAlignment="Center" VerticalAlignment="Bottom"
                 Background="AliceBlue" FontFamily="Comic Sans MS" FontSize="14" FontStretch="Expanded" FontWeight="Black"/>
-        <Label HorizontalAlignment="Left" VerticalAlignment="Top">TextTextText:</Label>
-        <TextBox Background="Bisque" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150"></TextBox>
-    </Grid>-->
-    <!--<Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="159*"/>
-            <ColumnDefinition Width="437*"/>
-            <ColumnDefinition Width="196*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="41*"/>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="125*"/>
-            <RowDefinition Height="122*"/>
-            <RowDefinition Height="56*"/>
-        </Grid.RowDefinitions>
-        <Button Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"></Button>
-    </Grid>-->
-    <!--<UniformGrid Rows="4" Columns="4">
-        <Label Background="Orange" Grid.Row="3" Grid.Column="2"/>
-        <TextBox Background="GreenYellow"></TextBox>
-    </UniformGrid>-->
-    <!--<StackPanel Orientation="Vertical">
-        <Button Background="Aqua" Height="50"></Button>
-        <Button Background="Bisque" Height="80"></Button>
-    </StackPanel>-->
-    <!--<WrapPanel Orientation="Vertical">
-        <Button Width="200" Height="160"></Button>
-        <Button Width="100" Height="60"></Button>
-        <Button Width="100" Height="80"></Button>
-        <Button Width="100" Height="60"></Button>
-        <Button Width="400" Height="100"></Button>
-    </WrapPanel>-->
+    </Grid>
 </Window>
