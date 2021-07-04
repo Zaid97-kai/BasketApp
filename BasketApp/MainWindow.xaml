@@ -36,11 +36,11 @@
         <Button Background="Aqua" Height="50"></Button>
         <Button Background="Bisque" Height="80"></Button>
     </StackPanel>-->
-    <WrapPanel>
+    <!--<WrapPanel Orientation="Vertical">
         <Button Width="200" Height="160"></Button>
         <Button Width="100" Height="60"></Button>
         <Button Width="100" Height="80"></Button>
         <Button Width="100" Height="60"></Button>
         <Button Width="400" Height="100"></Button>
-    </WrapPanel>
+    </WrapPanel>-->
 </Window>
