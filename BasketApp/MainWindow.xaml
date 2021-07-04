@@ -8,10 +8,31 @@
         Title="NBA" Height="800" Width="1200" WindowStartupLocation="CenterScreen" MinHeight="400" MinWidth="600">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="640*"/>
-            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="321*"/>
+                <ColumnDefinition Width="718*"/>
+                <ColumnDefinition Width="150*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Left" Orientation="Horizontal">
+                <Image x:Name="LogoImg" HorizontalAlignment="Left" Source="/Resources/logo.jpg" />
+                <Label x:Name="LabelNBAMS" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" FontSize="16">NBA Managment System</Label>
+            </StackPanel>
+            <Label HorizontalAlignment="Center" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center">HEADER</Label>
+            <Button Content="Back" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center" Width="60" Height="30">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        <!--<Button Background="AliceBlue" Grid.Row="0"></Button>
+        <Button Background="Black" Grid.Row="2"></Button>-->
         <!--<StackPanel Orientation="Horizontal">
             <Label HorizontalAlignment="Left" VerticalAlignment="Top">TextTextText:</Label>
             <TextBox Background="Bisque" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150"></TextBox>
