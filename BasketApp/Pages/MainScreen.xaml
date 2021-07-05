@@ -3,11 +3,16 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:BasketApp.Pages"
+      xmlns:local="clr-namespace:BasketApp.Pages" xmlns:sys="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Main Screen" Height="640" Width="1200" Background="White">
 
+    <Page.Resources>
+        <sys:String x:Key="NullImage">
+            pack://application:,,,/Resources/DefaultPicture.PNG
+        </sys:String>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80*"/>
@@ -28,12 +33,34 @@
         </Border>
 
         <!--Блок для размещения мест вставки фотографий-->
+        <!--<Border Grid.Row="2">
+            <StackPanel Orientation="Horizontal" >
+                <Button Content="&lt;" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Margin="20" BorderBrush="White" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF818181"></Button>
+                <Image x:Name="FirstImage" Source="{Binding Pictures.Img, FallbackValue={StaticResource NullImage}}" Margin="40 40 20 40" ></Image>
+                <Image x:Name="SecondImage" Source="{Binding Pictures.Img, FallbackValue={StaticResource NullImage}}" Margin="20 40 20 40"></Image>
+                <Image x:Name="ThirdImage" Source="{Binding Pictures.Img, FallbackValue={StaticResource NullImage}}" Margin="20 40 40 40"></Image>
+                <Button Content="&gt;" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Right" Background="White" BorderBrush="White" Foreground="#FF818181"></Button>
+            </StackPanel>
+        </Border>-->
         <Border Grid.Row="2">
             <StackPanel Orientation="Horizontal" >
                 <Button Content="&lt;" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Margin="20" BorderBrush="White" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF818181"></Button>
-                <Image x:Name="FirstImage" Source="/Resources/DefaultPicture.PNG" Margin="40 40 20 40" ></Image>
-                <Image x:Name="SecondImage" Source="/Resources/DefaultPicture.PNG" Margin="20 40 20 40"></Image>
-                <Image x:Name="ThirdImage" Source="/Resources/DefaultPicture.PNG" Margin="20 40 40 40"></Image>
+                <ListView x:Name="ListPictures" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image x:Name="FirstImage" Width="100" Height="100" Source="{Binding Img, FallbackValue={StaticResource NullImage}}" Margin="40 40 20 40" ></Image>
+                                <!--<Image x:Name="SecondImage" Width="100" Height="100" Source="{Binding Pictures.Img, FallbackValue={StaticResource NullImage}}" Margin="20 40 20 40"></Image>
+                                <Image x:Name="ThirdImage" Width="100" Height="100" Source="{Binding Pictures.Img, FallbackValue={StaticResource NullImage}}" Margin="20 40 40 40"></Image>-->
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
                 <Button Content="&gt;" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Right" Background="White" BorderBrush="White" Foreground="#FF818181"></Button>
             </StackPanel>
         </Border>

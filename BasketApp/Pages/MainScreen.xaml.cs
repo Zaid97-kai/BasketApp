@@ -21,15 +21,23 @@ namespace BasketApp.Pages
     public partial class PlayerMain : Page
     {
         static public MainWindow mainWindow;
+        private NBAShort_08Entities _context = new NBAShort_08Entities();
+        private List<Pictures> _pictures = new List<Pictures>();
+        private int _currentPage = 1;
         /// <summary>
         /// Метод-конструктор класса
         /// </summary>
         public PlayerMain()
         {
             InitializeComponent();
-            //mainWindow.LabelHeader.Content = "NBA Managment Studio";
-            //mainWindow.LabelNBAMS.Content = "";
             mainWindow.SecondFooterLabelInfo.Content = 1;
+            _pictures = _context.Pictures.ToList();
+
+            List<Pictures> pictures = _context.Pictures.ToList();//new List<Pictures>();
+            //pictures = _pictures.Skip((_currentPage - 1) * 3).Take(3).ToList();
+            //MessageBox.Show(pictures.Count.ToString());
+
+            ListPictures.ItemsSource = pictures;
         }
 
         /// <summary>

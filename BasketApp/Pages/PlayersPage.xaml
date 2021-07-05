@@ -94,7 +94,7 @@
             </UniformGrid>
         </StackPanel>
         <!--Блок для размещения DataGrid, куда будет извлекаться информация об игроках-->
-        <DataGrid Grid.Row="3" Name="GridPlayers" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid Grid.Row="3" Name="GridPlayers" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Photo">
                     <DataGridTemplateColumn.CellTemplate>
