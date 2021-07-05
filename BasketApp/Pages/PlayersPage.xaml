@@ -105,7 +105,7 @@
                 </DataGridTemplateColumn>
                 <DataGridTextColumn Header="No." Binding="{Binding ShirtNumber}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Name" Binding="{Binding Player.Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Team" Binding="{Binding TeamName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Team" Binding="{Binding Team.Abbr}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Position" Binding="{Binding Player.Position.Abbr}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Weight" Binding="{Binding Player.Weight}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Height" Binding="{Binding Player.Height}"></DataGridTextColumn>

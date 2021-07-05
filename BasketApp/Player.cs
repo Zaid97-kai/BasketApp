@@ -37,7 +37,5 @@ namespace BasketApp
         public virtual Position Position { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PlayerInTeam> PlayerInTeam { get; set; }
-
-
     }
 }

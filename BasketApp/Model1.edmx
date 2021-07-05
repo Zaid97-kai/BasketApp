@@ -395,8 +395,8 @@
           <Property Name="CurrentQuarter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Season" Relationship="Self.FK_Matchup_Season" FromRole="Matchup" ToRole="Season" />
           <NavigationProperty Name="MatchupType" Relationship="Self.FK_Schedule_SeasonType" FromRole="Matchup" ToRole="MatchupType" />
-          <NavigationProperty Name="Team" Relationship="Self.FK_Schedule_Team" FromRole="Matchup" ToRole="Team" />
-          <NavigationProperty Name="Team1" Relationship="Self.FK_Schedule_Team1" FromRole="Matchup" ToRole="Team" />
+          <NavigationProperty Name="TeamAway" Relationship="Self.FK_Schedule_Team" FromRole="Matchup" ToRole="Team" />
+          <NavigationProperty Name="TeamHome" Relationship="Self.FK_Schedule_Team1" FromRole="Matchup" ToRole="Team" />
         </EntityType>
         <EntityType Name="MatchupType">
           <Key>

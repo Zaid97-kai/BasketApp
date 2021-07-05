@@ -20,8 +20,8 @@ namespace BasketApp.Pages
     /// </summary>
     public partial class PlayersPage : Page
     {
-        private List<PlayerInTeam> players = new List<PlayerInTeam>();
-        private NBAShort_08Entities context;
+        private List<PlayerInTeam> _players = new List<PlayerInTeam>();
+        private NBAShort_08Entities _context;
 
         private int _currentPage = 1;
         private int _countPlayers = 5;
@@ -42,13 +42,13 @@ namespace BasketApp.Pages
             ////GridPlayers.ItemsSource = context.Player.ToList(); //Загрузка в GridPlayers данных, хранимых в коллекции Player
             //GridPlayers.ItemsSource = players;
 
-            context = new NBAShort_08Entities();
-            this.players = context.PlayerInTeam.ToList();
+            _context = new NBAShort_08Entities();
+            this._players = _context.PlayerInTeam.ToList();
 
-            GridPlayers.ItemsSource = context.PlayerInTeam.ToList();
+            GridPlayers.ItemsSource = _context.PlayerInTeam.ToList();
 
-            SeasonNames.ItemsSource = context.Season.OrderByDescending(season => season.Name).ToList();
-            TeamNames.ItemsSource = context.Team.OrderBy(team => team.TeamName).ToList();
+            SeasonNames.ItemsSource = _context.Season.OrderByDescending(season => season.Name).ToList();
+            TeamNames.ItemsSource = _context.Team.OrderBy(team => team.TeamName).ToList();
             SeasonNames.SelectedIndex = 0;
             TeamNames.SelectedIndex = 0;
 
@@ -59,31 +59,33 @@ namespace BasketApp.Pages
         {
             RefreshPlayers();
         }
-
+        /// <summary>
+        /// Обновление списка пользователей
+        /// </summary>
         private void RefreshPlayers()
         {
             Team selectedTeam = TeamNames.SelectedItem as Team;
             Season selectedSeason = SeasonNames.SelectedItem as Season;
             string searchText = TxtPlayerName.Text;
 
-            this.players = context.PlayerInTeam.ToList();
-            players = players.Where(x => x.Season == selectedSeason).ToList();
-            players = players.Where(x => x.Team == selectedTeam).ToList();
-            if (!string.IsNullOrWhiteSpace(searchText))
+            this._players = _context.PlayerInTeam.ToList();
+            _players = _players.Where(x => x.Season == selectedSeason).ToList(); //фильтрация по сезонам
+            _players = _players.Where(x => x.Team == selectedTeam).ToList(); //фильтрация по командам
+            if (!string.IsNullOrWhiteSpace(searchText)) //проверка на отсутствие пробелов
             {
-                players = players.Where(x => x.Player.Name.ToLower().Contains(searchText.ToLower())).ToList();
+                _players = _players.Where(x => x.Player.Name.ToLower().Contains(searchText.ToLower())).ToList(); //фильтрация по имени игрока
             }
 
             //GridPlayers.ItemsSource = null;
-            players = players.OrderBy(players => players.ShirtNumber).ToList();
+            _players = _players.OrderBy(players => players.ShirtNumber).ToList(); //сортировка игроков по номеру футболки
 
-            _maxPages = Convert.ToInt32(Math.Ceiling(players.Count * 1.0 / _countPlayers)); //определение максимального количества страниц
-            var listPlayersInPage = players.Skip((_currentPage - 1) * _countPlayers).Take(_countPlayers).ToList();
+            _maxPages = Convert.ToInt32(Math.Ceiling(_players.Count * 1.0 / _countPlayers)); //определение максимального количества страниц
+            var listPlayersInPage = _players.Skip((_currentPage - 1) * _countPlayers).Take(_countPlayers).ToList(); //создание списка игроков для размещения в одной таблице
             //players = players.GetRange((_currentPage - 1) * _countPlayers, _countPlayers);
 
             TxtCurrentPageNumber.Text = _currentPage.ToString();
             LblTotalPages.Content = "of " + _maxPages;
-            LblPlayersInfo.Content = $"Total {players.Count} records, {_countPlayers} records in one page";
+            LblPlayersInfo.Content = $"Total {_players.Count} records, {_countPlayers} records in one page";
 
             GridPlayers.ItemsSource = listPlayersInPage;
         }
@@ -97,24 +99,49 @@ namespace BasketApp.Pages
         {
             RefreshPlayers();
         }
+        /// <summary>
+        /// Переход на последнюю страницу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoLastPageButton_Click(object sender, RoutedEventArgs e)
         {
             _currentPage = _maxPages;
             RefreshPlayers();
         }
-
+        /// <summary>
+        /// Переход на следующую страницу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoNextPageButton_Click(object sender, RoutedEventArgs e)
         {
+            if(_currentPage + 1 > _maxPages)
+            {
+                return;
+            }
             _currentPage++;
             RefreshPlayers();
         }
-
+        /// <summary>
+        /// Переход на предыдущую страницу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoPrevPageButton_Click(object sender, RoutedEventArgs e)
         {
+            if (_currentPage - 1 < 1)
+            {
+                return;
+            }
             _currentPage--;
             RefreshPlayers();
         }
-
+        /// <summary>
+        /// Переход на первую страницу
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoFirstPageButton_Click(object sender, RoutedEventArgs e)
         {
             _currentPage = 1;

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace BasketApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MatchupList.xaml
+    /// Логика взаимодействия для TempMatchupList.xaml
     /// </summary>
-    public partial class MatchupList : Page
+    public partial class TempMatchupList : Page
     {
-        public MatchupList()
+        public TempMatchupList()
         {
             InitializeComponent();
 

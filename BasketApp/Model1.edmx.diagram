@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0aa490a00d3249179760b62615fdc18b" Name="Diagram1">
+      <Diagram DiagramId="0aa490a00d3249179760b62615fdc18b" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="NBAShort_08Model.Conference" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NBAShort_08Model.Country" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
         <EntityTypeShape EntityType="NBAShort_08Model.Division" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
@@ -29,7 +29,17 @@
         <AssociationConnector Association="NBAShort_08Model.FK_PlayerInTeam_Season" ManuallyRouted="false" />
         <AssociationConnector Association="NBAShort_08Model.FK_PlayerInTeam_Team" ManuallyRouted="false" />
         <AssociationConnector Association="NBAShort_08Model.FK_TeamInPostseason_Season" ManuallyRouted="false" />
-        <AssociationConnector Association="NBAShort_08Model.FK_TeamInPostseason_Team" ManuallyRouted="false" />
+        <AssociationConnector Association="NBAShort_08Model.FK_TeamInPostseason_Team" ManuallyRouted="true" >
+          <ConnectorPoint PointX="6.75" PointY="4.875" />
+          <ConnectorPoint PointX="6.75" PointY="4.7516816923076926" />
+          <ConnectorPoint PointX="6.875" PointY="4.7516816923076926" />
+          <ConnectorPoint PointX="7.0557691685024189" PointY="4.6305663494110725" />
+          <ConnectorPoint PointX="7.19423083149758" PointY="4.5377970352043153" />
+          <ConnectorPoint PointX="7.4375" PointY="4.3748066923076934" />
+          <ConnectorPoint PointX="7.3125" PointY="4.3748066923076934" />
+          <ConnectorPoint PointX="7.3125" PointY="2.9944941899038571" />
+          <ConnectorPoint PointX="7.5" PointY="2.9944941899038571" />
+        </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

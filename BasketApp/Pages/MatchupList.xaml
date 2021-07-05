@@ -25,7 +25,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid>
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="12*"/>
             <RowDefinition Height="28*"/>
@@ -60,7 +60,7 @@
             <Image Grid.Row="2" Grid.Column="4" Source="/Resources/person.png" VerticalAlignment="Center" HorizontalAlignment="Center"></Image>
             <Label Style="{StaticResource BlueLabel}" Grid.Row="2" Grid.Column="5" Content="Team Second" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
         </Grid>
-        <!--<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
             <Border Name="MatchupItem" BorderThickness="1" BorderBrush="Black" Background="AntiqueWhite">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Azure">
                     <Label x:Name="StatusName" Content="Status" Background="Gray" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 30 0"></Label>
@@ -80,7 +80,7 @@
                     </Button>
                 </StackPanel>
             </Border>
-        </StackPanel>-->
+        </StackPanel>
         <Grid x:Name="MatchupsTable" Grid.Row="1" Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -101,24 +101,111 @@
                 <ColumnDefinition Width="60*"/>
             </Grid.ColumnDefinitions>
 
-            <ListView>
-            <Border Grid.Row="0" Grid.ColumnSpan="9" BorderThickness="1" BorderBrush="Black"></Border>
-            <Label Grid.Row="0" Grid.Column="0"  x:Name="StatusName" Content="Status" Background="Gray" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5 5"></Label>
-            <Label Grid.Row="0" Grid.Column="1"  x:Name="DateTimeMatchup" Style="{StaticResource GrayLabel}" Content="XX/XX XX:XX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-            <Image Grid.Row="0" Grid.Column="2" x:Name="LeftTeamLogo" Source="/Resources/logo.jpg" Width="50" Height="50"/>
-            <Label Grid.Row="0" Grid.Column="3" x:Name="LeftTeamName" Style="{StaticResource BlueLabel}" Content="Team Name 1" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-            <Label Grid.Row="0" Grid.Column="4" x:Name="Score" Content="XXX-XXX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-            <Image Grid.Row="0" Grid.Column="5" x:Name="RightTeamLogo" Source="/Resources/logo.jpg" Width="50" Height="50"/>
-            <Label Grid.Row="0" Grid.Column="6" x:Name="RightTeamName" Style="{StaticResource BlueLabel}" Content="Team Name 2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-            <Label Grid.Row="0" Grid.Column="7" x:Name="Location" Style="{StaticResource GrayLabel}" Content="Location" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-            <Button Grid.Row="0" Grid.Column="8" x:Name="ViewButton" Content="View" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+            <Grid Grid.RowSpan="4" Grid.ColumnSpan="9" Background="YellowGreen">
+                <ListView>
+                    <Border Grid.Row="0" Grid.ColumnSpan="9" BorderThickness="1" BorderBrush="Black"></Border>
+                    <Label Grid.Row="0" Grid.Column="0"  x:Name="StatusName" Content="Status" Background="Gray" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5 5"></Label>
+                    <Label Grid.Row="0" Grid.Column="1"  x:Name="DateTimeMatchup" Style="{StaticResource GrayLabel}" Content="XX/XX XX:XX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <Image Grid.Row="0" Grid.Column="2" x:Name="LeftTeamLogo" Source="/Resources/logo.jpg" Width="50" Height="50"/>
+                    <Label Grid.Row="0" Grid.Column="3" x:Name="LeftTeamName" Style="{StaticResource BlueLabel}" Content="Team Name 1" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <Label Grid.Row="0" Grid.Column="4" x:Name="Score" Content="XXX-XXX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <Image Grid.Row="0" Grid.Column="5" x:Name="RightTeamLogo" Source="/Resources/logo.jpg" Width="50" Height="50"/>
+                    <Label Grid.Row="0" Grid.Column="6" x:Name="RightTeamName" Style="{StaticResource BlueLabel}" Content="Team Name 2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                    <Label Grid.Row="0" Grid.Column="7" x:Name="Location" Style="{StaticResource GrayLabel}" Content="Location" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                    <Button Grid.Row="0" Grid.Column="8" x:Name="ViewButton" Content="View" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    </Button>
             </ListView>
+                </Grid>
         </Grid>
+    </Grid>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120">
+
+            </RowDefinition>
+            <RowDefinition Height="Auto">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <Image Width="70" Height="70" Source="{Binding TeamAway.Logo}"></Image>
+                <Label Content="{Binding TeamAway.TeamName}"></Label>
+                <Label Content="(Away)"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <Label FontSize="40">VS</Label>
+                <Label Content="{Binding Starttime}"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="2">
+                <Image Width="70" Height="70" Source="{Binding TeamHome.Logo}"></Image>
+                <Label Content="{Binding TeamHome.TeamName}"></Label>
+                <Label Content="(Home)"></Label>
+            </StackPanel>
+        </Grid>
+
+        <ListView Grid.Row="1" x:Name="ListMatchups" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel>
+                        
+                    </WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                            <Image Width="40" Height="40" Source="{Binding TeamAway.Logo}"></Image>
+                            <Label Content="{Binding TeamAway.TeamName}"></Label>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                            <Label Content="{Binding}" Width="80"></Label>
+                            <Label Content="{Binding Starttime}"></Label>
+                            <Label Content="{Binding Team_Away_Score}"></Label>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2" >
+                            <Image Width="40" Height="40" Source="{Binding TeamHome.Logo}"></Image>
+                            <Label Content="{Binding TeamHome.TeamName}"></Label>
+                        </StackPanel>
+
+                        <StackPanel Grid.ColumnSpan="3" Orientation="Vertical" Grid.Row="1">
+                            <Label Content="{Binding Location}"></Label>
+                            <Button Content="View" Name="BtnView">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
+
 </Page>

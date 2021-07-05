@@ -28,7 +28,7 @@ namespace BasketApp
     
         public virtual Season Season { get; set; }
         public virtual MatchupType MatchupType { get; set; }
-        public virtual Team Team { get; set; }
-        public virtual Team Team1 { get; set; }
+        public virtual Team TeamAway { get; set; }
+        public virtual Team TeamHome { get; set; }
     }
 }
