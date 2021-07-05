@@ -34,6 +34,13 @@
                 <DatePicker IsTodayHighlighted="True" FontSize="10" Width="100"></DatePicker>
                 <Button Content="&gt;" Width="30" FontSize="14"></Button>
             </StackPanel>
+            <Image Grid.Row="2" Grid.Column="1" Source="/Resources/person.png"></Image>
+            <Label Grid.Row="2" Grid.Column="2" Content="Team First"></Label>
+            <UniformGrid Grid.Row="2" Grid.Column="3" Background="Aqua" Rows="2" Columns="1">
+                <Label Content="VS"></Label>
+                <Label Content="Time Start"></Label>
+            </UniformGrid>
+            <Label Grid.Row="2" Grid.Column="4" Content="Team Second"></Label>
         </Grid>
     </Grid>
 </Page>
