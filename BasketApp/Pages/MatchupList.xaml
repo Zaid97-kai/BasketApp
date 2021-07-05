@@ -19,7 +19,7 @@
         <Style TargetType="Label" x:Key="GrayLabel">
             <Setter Property="Foreground" Value="Gray"/>
             <Setter Property="Background" Value="White"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="FontFamily" Value="Calibri"/>
             <Setter Property="BorderBrush" Value="White"/>
         </Style>
@@ -128,7 +128,7 @@
             <RowDefinition Height="120">
 
             </RowDefinition>
-            <RowDefinition Height="Auto">
+            <RowDefinition Height="*"> <!--Не ставить auto, если нужен скролл в ListView-->
 
             </RowDefinition>
         </Grid.RowDefinitions>
@@ -141,17 +141,17 @@
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Vertical" Grid.Column="0" HorizontalAlignment="Right">
                 <Image Width="70" Height="70" Source="{Binding TeamAway.Logo}"></Image>
-                <Label Content="{Binding TeamAway.TeamName}"></Label>
-                <Label Content="(Away)"></Label>
+                <Label Style="{StaticResource BlueLabel}" Content="{Binding TeamAway.TeamName}"></Label>
+                <Label Style="{StaticResource BlueLabel}" Content="(Away)" HorizontalAlignment="Center"></Label>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Column="1">
+            <StackPanel Orientation="Vertical" Grid.Column="1" Margin="20 0" VerticalAlignment="Center">
                 <Label FontSize="40">VS</Label>
-                <Label Content="{Binding Starttime, StringFormat={}{0:HH:mm 'Start'}}"></Label>
+                <TextBlock Text="{Binding Starttime, StringFormat={}{0:HH:mm 'Start'}}"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Vertical" Grid.Column="2" HorizontalAlignment="Left">
                 <Image Width="70" Height="70" Source="{Binding TeamHome.Logo}"></Image>
-                <Label Content="{Binding TeamHome.TeamName}"></Label>
-                <Label Content="(Home)"></Label>
+                <Label Style="{StaticResource BlueLabel}" Content="{Binding TeamHome.TeamName}"></Label>
+                <Label Style="{StaticResource BlueLabel}" Content="(Home)" HorizontalAlignment="Center"></Label>
             </StackPanel>
         </Grid>
 
