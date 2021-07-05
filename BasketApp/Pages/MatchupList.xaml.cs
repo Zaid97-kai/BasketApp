@@ -27,5 +27,10 @@ namespace BasketApp.Pages
             NBAShort_08Entities context = new NBAShort_08Entities();
             ListMatchups.ItemsSource = context.Matchup.ToList();
         }
+
+        private void BtnView_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

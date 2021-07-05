@@ -33,12 +33,17 @@
           <ConnectorPoint PointX="6.75" PointY="4.875" />
           <ConnectorPoint PointX="6.75" PointY="4.7516816923076926" />
           <ConnectorPoint PointX="6.875" PointY="4.7516816923076926" />
+          <ConnectorPoint PointX="6.9093728666215437" PointY="4.7286518716712589" />
+          <ConnectorPoint PointX="7.0478345296167051" PointY="4.6358825574645017" />
           <ConnectorPoint PointX="7.0557691685024189" PointY="4.6305663494110725" />
           <ConnectorPoint PointX="7.19423083149758" PointY="4.5377970352043153" />
           <ConnectorPoint PointX="7.4375" PointY="4.3748066923076934" />
-          <ConnectorPoint PointX="7.3125" PointY="4.3748066923076934" />
-          <ConnectorPoint PointX="7.3125" PointY="2.9944941899038571" />
-          <ConnectorPoint PointX="7.5" PointY="2.9944941899038571" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="4.3748066923076925" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="4.3748066923076934" />
+          <ConnectorPoint PointX="6.9786036981191248" PointY="4.3748066923076934" />
+          <ConnectorPoint PointX="6.9786036981191248" PointY="9.2753127063631258" />
+          <ConnectorPoint PointX="7.3125" PointY="9.2753127063631258" />
+          <ConnectorPoint PointX="7.5" PointY="3.4802864583333331" />
         </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>

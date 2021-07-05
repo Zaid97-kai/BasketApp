@@ -155,12 +155,12 @@
             </StackPanel>
         </Grid>
 
-        <ListView Grid.Row="1" x:Name="ListMatchups" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListView Grid.Row="1" x:Name="ListMatchups" ScrollViewer.HorizontalScrollBarVisibility="Visible"  HorizontalContentAlignment="Stretch">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel>
+                    <StackPanel Orientation="Vertical">
                         
-                    </WrapPanel>
+                    </StackPanel>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
@@ -194,7 +194,7 @@
 
                         <StackPanel Grid.ColumnSpan="3" Orientation="Vertical" Grid.Row="1">
                             <Label Content="{Binding Location}"></Label>
-                            <Button Content="View" Name="BtnView">
+                            <Button Content="View" Name="BtnView" Click="BtnView_Click">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="5"/>
