@@ -86,9 +86,9 @@
             <!--Поля для фильтрации-->
             <UniformGrid Rows="1" Columns="8">
                 <Label Style="{StaticResource BlueLabel}" Content="Season:" HorizontalAlignment="Right"></Label>
-                <ComboBox></ComboBox>
+                <ComboBox x:Name="SeasonNames" DisplayMemberPath="Name"></ComboBox>
                 <Label Style="{StaticResource BlueLabel}" Content="Team:" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-                <ComboBox></ComboBox>
+                <ComboBox x:Name="TeamNames" DisplayMemberPath="TeamName"></ComboBox>
                 <Label Style="{StaticResource BlueLabel}" Content="PlayerName:" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
                 <TextBox></TextBox>
             </UniformGrid>
