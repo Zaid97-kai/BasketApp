@@ -114,12 +114,13 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="4" x:Name="PaginationPanel" Orientation="Horizontal" Margin="40 0 0 0">
-            <Button Style="{StaticResource PaginationButton}" Content="&lt;&lt;"></Button>
-            <Button Style="{StaticResource PaginationButton}" Content="&lt;"></Button>
-            <TextBox x:Name="CurrentPageNumber" Width="50" Height="20"></TextBox>
-            <Label FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center">of 6</Label>
-            <Button Style="{StaticResource PaginationButton}" Content="&gt;"></Button>
-            <Button Style="{StaticResource PaginationButton}" Content="&gt;&gt;"></Button>
+            <Button x:Name="GoFirstPageButton" Style="{StaticResource PaginationButton}" Content="&lt;&lt;" Click="GoFirstPageButton_Click"></Button>
+            <Button x:Name="GoPrevPageButton" Style="{StaticResource PaginationButton}" Content="&lt;" Click="GoPrevPageButton_Click"></Button>
+            <TextBox x:Name="TxtCurrentPageNumber" Width="50" Height="20"></TextBox>
+            <Label x:Name="LblTotalPages" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center">of 6</Label>
+            <Button x:Name="GoNextPageButton" Style="{StaticResource PaginationButton}" Content="&gt;" Click="GoNextPageButton_Click"></Button>
+            <Button x:Name="GoLastPageButton" Style="{StaticResource PaginationButton}" Content="&gt;&gt;" Click="GoLastPageButton_Click"></Button>
+            <Label x:Name="LblPlayersInfo"></Label>
         </StackPanel>
     </Grid>
 </Page>

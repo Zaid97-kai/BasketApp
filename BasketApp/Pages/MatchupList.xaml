@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:BasketApp.Pages"
+      xmlns:local="clr-namespace:BasketApp.Pages" xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MatchupList" Background="White">
@@ -101,6 +101,7 @@
                 <ColumnDefinition Width="60*"/>
             </Grid.ColumnDefinitions>
 
+            <ListView>
             <Border Grid.Row="0" Grid.ColumnSpan="9" BorderThickness="1" BorderBrush="Black"></Border>
             <Label Grid.Row="0" Grid.Column="0"  x:Name="StatusName" Content="Status" Background="Gray" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5 5"></Label>
             <Label Grid.Row="0" Grid.Column="1"  x:Name="DateTimeMatchup" Style="{StaticResource GrayLabel}" Content="XX/XX XX:XX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
@@ -117,7 +118,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            
+            </ListView>
         </Grid>
     </Grid>
 </Page>

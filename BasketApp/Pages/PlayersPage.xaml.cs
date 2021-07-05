@@ -22,6 +22,10 @@ namespace BasketApp.Pages
     {
         private List<PlayerInTeam> players = new List<PlayerInTeam>();
         private NBAShort_08Entities context;
+
+        private int _currentPage = 1;
+        private int _countPlayers = 5;
+        private int _maxPages;
         /// <summary>
         /// Метод-конструктор класса PlayersPage
         /// </summary>
@@ -72,7 +76,16 @@ namespace BasketApp.Pages
 
             //GridPlayers.ItemsSource = null;
             players = players.OrderBy(players => players.ShirtNumber).ToList();
-            GridPlayers.ItemsSource = players;
+
+            _maxPages = Convert.ToInt32(Math.Ceiling(players.Count * 1.0 / _countPlayers)); //определение максимального количества страниц
+            var listPlayersInPage = players.Skip((_currentPage - 1) * _countPlayers).Take(_countPlayers).ToList();
+            //players = players.GetRange((_currentPage - 1) * _countPlayers, _countPlayers);
+
+            TxtCurrentPageNumber.Text = _currentPage.ToString();
+            LblTotalPages.Content = "of " + _maxPages;
+            LblPlayersInfo.Content = $"Total {players.Count} records, {_countPlayers} records in one page";
+
+            GridPlayers.ItemsSource = listPlayersInPage;
         }
 
         private void TeamNames_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -82,6 +95,29 @@ namespace BasketApp.Pages
 
         private void TxtPlayerName_TextChanged(object sender, TextChangedEventArgs e)
         {
+            RefreshPlayers();
+        }
+        private void GoLastPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            _currentPage = _maxPages;
+            RefreshPlayers();
+        }
+
+        private void GoNextPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            _currentPage++;
+            RefreshPlayers();
+        }
+
+        private void GoPrevPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            _currentPage--;
+            RefreshPlayers();
+        }
+
+        private void GoFirstPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            _currentPage = 1;
             RefreshPlayers();
         }
     }
