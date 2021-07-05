@@ -30,7 +30,8 @@ namespace BasketApp.Pages
 
         private void BtnView_Click(object sender, RoutedEventArgs e)
         {
-
+            Matchup SelectedMatchup = (sender as Button).DataContext as Matchup;
+            GridSelectedMatchup.DataContext = SelectedMatchup;
         }
     }
 }

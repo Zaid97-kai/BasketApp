@@ -133,22 +133,22 @@
             </RowDefinition>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Name="GridSelectedMatchup">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Vertical" Grid.Column="0">
+            <StackPanel Orientation="Vertical" Grid.Column="0" HorizontalAlignment="Right">
                 <Image Width="70" Height="70" Source="{Binding TeamAway.Logo}"></Image>
                 <Label Content="{Binding TeamAway.TeamName}"></Label>
                 <Label Content="(Away)"></Label>
             </StackPanel>
             <StackPanel Orientation="Vertical" Grid.Column="1">
                 <Label FontSize="40">VS</Label>
-                <Label Content="{Binding Starttime}"></Label>
+                <Label Content="{Binding Starttime, StringFormat={}{0:HH:mm 'Start'}}"></Label>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Column="2">
+            <StackPanel Orientation="Vertical" Grid.Column="2" HorizontalAlignment="Left">
                 <Image Width="70" Height="70" Source="{Binding TeamHome.Logo}"></Image>
                 <Label Content="{Binding TeamHome.TeamName}"></Label>
                 <Label Content="(Home)"></Label>
