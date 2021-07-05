@@ -24,7 +24,7 @@
             <Setter Property="BorderBrush" Value="White"/>
         </Style>
     </Page.Resources>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="12*"/>
@@ -60,26 +60,64 @@
             <Image Grid.Row="2" Grid.Column="4" Source="/Resources/person.png" VerticalAlignment="Center" HorizontalAlignment="Center"></Image>
             <Label Style="{StaticResource BlueLabel}" Grid.Row="2" Grid.Column="5" Content="Team Second" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
         </Grid>
-        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
-            <Border Name="MatchupItem" BorderThickness="1" BorderBrush="Black">
-                <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Label Content="Status" Background="Gray" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-                    <Label Style="{StaticResource GrayLabel}" Content="XX/XX XX:XX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                    <Image Source="/Resources/logo.jpg" Width="50" Height="50"/>
-                    <Label Style="{StaticResource BlueLabel}" Content="Team Name 1" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                    <Label Content="XXX-XXX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                    <Image Source="/Resources/logo.jpg" Width="50" Height="50"/>
-                    <Label Style="{StaticResource BlueLabel}" Content="Team Name 2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-                    <Label Style="{StaticResource GrayLabel}" Content="Location" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-                    <Button Content="View" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <!--<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+            <Border Name="MatchupItem" BorderThickness="1" BorderBrush="Black" Background="AntiqueWhite">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Azure">
+                    <Label x:Name="StatusName" Content="Status" Background="Gray" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 30 0"></Label>
+                    <Label x:Name="DateTimeMatchup" Style="{StaticResource GrayLabel}" Content="XX/XX XX:XX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <Image x:Name="LeftTeamLogo" Source="/Resources/logo.jpg" Width="50" Height="50"/>
+                    <Label x:Name="LeftTeamName" Style="{StaticResource BlueLabel}" Content="Team Name 1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 30 0"></Label>
+                    <Label x:Name="Score" Content="XXX-XXX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <Image x:Name="RightTeamLogo" Source="/Resources/logo.jpg" Width="50" Height="50"/>
+                    <Label x:Name="RightTeamName" Style="{StaticResource BlueLabel}" Content="Team Name 2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 30 0"></Label>
+                    <Label x:Name="Location" Style="{StaticResource GrayLabel}" Content="Location" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 30 0"></Label>
+                    <Button x:Name="ViewButton" Content="View" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5"/>
                             </Style>
                         </Button.Resources>
                     </Button>
-                </WrapPanel>
+                </StackPanel>
             </Border>
-        </StackPanel>
+        </StackPanel>-->
+        <Grid x:Name="MatchupsTable" Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="59*"/>
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="59*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="81*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0" Grid.ColumnSpan="9" BorderThickness="1" BorderBrush="Black"></Border>
+            <Label Grid.Row="0" Grid.Column="0"  x:Name="StatusName" Content="Status" Background="Gray" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5 5"></Label>
+            <Label Grid.Row="0" Grid.Column="1"  x:Name="DateTimeMatchup" Style="{StaticResource GrayLabel}" Content="XX/XX XX:XX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Image Grid.Row="0" Grid.Column="2" x:Name="LeftTeamLogo" Source="/Resources/logo.jpg" Width="50" Height="50"/>
+            <Label Grid.Row="0" Grid.Column="3" x:Name="LeftTeamName" Style="{StaticResource BlueLabel}" Content="Team Name 1" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Label Grid.Row="0" Grid.Column="4" x:Name="Score" Content="XXX-XXX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Image Grid.Row="0" Grid.Column="5" x:Name="RightTeamLogo" Source="/Resources/logo.jpg" Width="50" Height="50"/>
+            <Label Grid.Row="0" Grid.Column="6" x:Name="RightTeamName" Style="{StaticResource BlueLabel}" Content="Team Name 2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            <Label Grid.Row="0" Grid.Column="7" x:Name="Location" Style="{StaticResource GrayLabel}" Content="Location" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            <Button Grid.Row="0" Grid.Column="8" x:Name="ViewButton" Content="View" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+        </Grid>
     </Grid>
 </Page>
