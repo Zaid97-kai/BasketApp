@@ -29,12 +29,11 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            <UniformGrid Grid.Row="1" Grid.Column="0" Rows="1" Columns="4" Background="AliceBlue">
-                <Button Content="&lt;" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></Button>
-                <TextBox></TextBox>
-                <DatePicker IsTodayHighlighted="True" FontSize="6" VerticalAlignment="Center" HorizontalAlignment="Center"></DatePicker>
-                <Button Content="&gt;" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></Button>
-            </UniformGrid>
+            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Background="AliceBlue">
+                <Button Content="&lt;" Width="30" FontSize="14"></Button>
+                <DatePicker IsTodayHighlighted="True" FontSize="10" Width="100"></DatePicker>
+                <Button Content="&gt;" Width="30" FontSize="14"></Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>

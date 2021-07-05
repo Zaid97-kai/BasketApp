@@ -33,7 +33,7 @@ namespace BasketApp.Pages
 
         private void MatchupsButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Эта функция будет реализована позднее!");
+            NavigationService.Navigate(new Pages.MatchupList());
         }
 
         private void PlayersButton_Click(object sender, RoutedEventArgs e)
