@@ -27,6 +27,7 @@
             </StackPanel>
         </Border>
 
+        <!--Блок для размещения мест вставки фотографий-->
         <Border Grid.Row="2">
             <StackPanel Orientation="Horizontal" >
                 <Button Content="&lt;" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Margin="20" BorderBrush="White" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF818181"></Button>

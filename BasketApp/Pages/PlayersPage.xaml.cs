@@ -18,43 +18,17 @@ namespace BasketApp.Pages
     /// <summary>
     /// Логика взаимодействия для PlayersPage.xaml
     /// </summary>
-    public class TempPlayer
-    {
-        public byte[] Img { get; set; }
-        public int PlayerId { get; set; }
-        public string Name { get; set; }
-        public string CountryCode { get; set; }
-        public string Position { get; set; }
-        public decimal Weight { get; set; }
-        public decimal Height { get; set; }
-        public string Country { get; set; }
-        public System.DateTime JoinYear { get; set; }
-    }
     public partial class PlayersPage : Page
     {
+        /// <summary>
+        /// Метод-конструктор класса PlayersPage
+        /// </summary>
         public PlayersPage()
         {
             InitializeComponent();
 
-            NBAShort_08Entities context = new NBAShort_08Entities();
-            GridPlayers.ItemsSource = context.Player.ToList();
-            //List<TempPlayer> tempPlayers = new List<TempPlayer>();
-            //foreach (Player item in context.Player)
-            //{
-            //    tempPlayers.Add(new TempPlayer
-            //    {
-            //        Img = item.Img,
-            //        PlayerId = item.PlayerId,
-            //        Name = item.Name,
-            //        Position = item.Position.Name,
-            //        Weight = item.Weight,
-            //        Height = item.Height,
-            //        JoinYear = item.JoinYear,
-            //        Country = item.Country.CountryName,
-            //        CountryCode = item.CountryCode
-            //    });
-            //}
-            //GridPlayers.ItemsSource = tempPlayers;
+            NBAShort_08Entities context = new NBAShort_08Entities(); //Создание экземпляра контекста данных NBAShort_08Entities
+            GridPlayers.ItemsSource = context.Player.ToList(); //Загрузка в GridPlayers данных, хранимых в коллекции Player
         }
     }
 }

@@ -21,6 +21,9 @@ namespace BasketApp.Pages
     public partial class PlayerMain : Page
     {
         static public MainWindow mainWindow;
+        /// <summary>
+        /// Метод-конструктор класса
+        /// </summary>
         public PlayerMain()
         {
             InitializeComponent();
@@ -29,12 +32,22 @@ namespace BasketApp.Pages
             mainWindow.SecondFooterLabelInfo.Content = 1;
         }
 
+        /// <summary>
+        /// Обработчик нажатия на кнопку для перехода к странице VisitorMenu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonVisitor_Click(object sender, RoutedEventArgs e)
         {
             VisitorMenu.mainWindow = mainWindow;
             NavigationService.Navigate(new Pages.VisitorMenu());
         }
         
+        /// <summary>
+        /// Метод-заглушка при нажатия кнопки Admin
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAdmin_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Эта функция будет реализована позднее!");
