@@ -96,18 +96,19 @@
                 <DataGridTemplateColumn Header="Photo">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Image Source="{Binding Img}"></Image>
+                            <!--<Image Source="/Resources/person.png"/>-->
+                            <Image Name="PlayerPhoto" Source="{Binding Player.Img}" Width="100" Height="100"></Image>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn Header="No." Binding="{Binding PlayerId}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Team" Binding="{Binding PlayerInTeam.Team.TeamName}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Position" Binding="{Binding Position.Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Weight" Binding="{Binding Weight}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Height" Binding="{Binding Height}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Experience" Binding="{Binding JoinYear}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Country" Binding="{Binding Country.CountryName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="No." Binding="{Binding ShirtNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Player.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Team" Binding="{Binding TeamName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Position" Binding="{Binding Player.Position.Abbr}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Weight" Binding="{Binding Player.Weight}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Height" Binding="{Binding Player.Height}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Experience" Binding="{Binding Player.Experience}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Country" Binding="{Binding Player.Country.CountryName}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="4" x:Name="PaginationPanel" Orientation="Horizontal" Margin="40 0 0 0">

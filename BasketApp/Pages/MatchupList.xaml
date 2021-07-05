@@ -6,9 +6,35 @@
       xmlns:local="clr-namespace:BasketApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MatchupList">
+      Title="MatchupList" Background="White">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Background="Yellow">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <UniformGrid Grid.Row="1" Grid.Column="0" Rows="1" Columns="4" Background="AliceBlue">
+                <Button Content="&lt;" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></Button>
+                <TextBox></TextBox>
+                <DatePicker IsTodayHighlighted="True" FontSize="6" VerticalAlignment="Center" HorizontalAlignment="Center"></DatePicker>
+                <Button Content="&gt;" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"></Button>
+            </UniformGrid>
+        </Grid>
     </Grid>
 </Page>

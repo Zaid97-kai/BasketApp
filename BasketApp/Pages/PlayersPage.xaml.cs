@@ -20,15 +20,34 @@ namespace BasketApp.Pages
     /// </summary>
     public partial class PlayersPage : Page
     {
+        List<Player> players = new List<Player>();
         /// <summary>
         /// Метод-конструктор класса PlayersPage
         /// </summary>
         public PlayersPage()
         {
             InitializeComponent();
+            /*
 
             NBAShort_08Entities context = new NBAShort_08Entities(); //Создание экземпляра контекста данных NBAShort_08Entities
-            GridPlayers.ItemsSource = context.Player.ToList(); //Загрузка в GridPlayers данных, хранимых в коллекции Player
+            
+            for (int i = 0; i < 5; i++)
+            {
+                players.Add(context.Player.ToList()[i]);
+            }
+            //GridPlayers.ItemsSource = context.Player.ToList(); //Загрузка в GridPlayers данных, хранимых в коллекции Player
+            GridPlayers.ItemsSource = players;
+            */
+
+            NBAShort_08Entities context = new NBAShort_08Entities();
+            GridPlayers.ItemsSource = context.PlayerInTeam.ToList();
         }
+
+        //private void PlayerPhoto_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    Uri uri = new Uri("pack://application:,,,/Resources/person.png");
+        //    BitmapImage bitmap = new BitmapImage(uri);
+        //    e.Source = bitmap;
+        //}
     }
 }
