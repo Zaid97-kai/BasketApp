@@ -24,6 +24,7 @@
             <Setter Property="BorderBrush" Value="White"/>
         </Style>
     </Page.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="12*"/>
@@ -45,7 +46,7 @@
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="199*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Background="AliceBlue">
+            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
                 <Button Content="&lt;" Width="20" FontSize="14" Margin="5 0 5 0"></Button>
                 <DatePicker IsTodayHighlighted="True" FontSize="12" Width="100"></DatePicker>
                 <Button Content="&gt;" Width="20" FontSize="14" Margin="5 0 5 0"></Button>
@@ -60,16 +61,16 @@
             <Label Style="{StaticResource BlueLabel}" Grid.Row="2" Grid.Column="5" Content="Team Second" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
         </Grid>
         <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
-            <Border>
-                <WrapPanel>
-                    <Label Content="Status" Background="Gray" Foreground="White" Margin="0 0 15 0" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-                    <Label Style="{StaticResource GrayLabel}" Content="XX/XX XX:XX" Foreground="Gray" Margin="0 0 15 0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Border Name="MatchupItem" BorderThickness="1" BorderBrush="Black">
+                <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Label Content="Status" Background="Gray" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                    <Label Style="{StaticResource GrayLabel}" Content="XX/XX XX:XX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
                     <Image Source="/Resources/logo.jpg" Width="50" Height="50"/>
-                    <Label Style="{StaticResource BlueLabel}" Content="Team Name 1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 15 0"></Label>
-                    <Label Content="XXX-XXX" Foreground="Gray" Margin="0 0 15 0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <Label Style="{StaticResource BlueLabel}" Content="Team Name 1" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                    <Label Content="XXX-XXX" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
                     <Image Source="/Resources/logo.jpg" Width="50" Height="50"/>
-                    <Label Style="{StaticResource BlueLabel}" Content="Team Name 2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 15 0"></Label>
-                    <Label Style="{StaticResource GrayLabel}" Content="Location" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 15 0"></Label>
+                    <Label Style="{StaticResource BlueLabel}" Content="Team Name 2" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+                    <Label Style="{StaticResource GrayLabel}" Content="Location" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
                     <Button Content="View" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -79,11 +80,6 @@
                     </Button>
                 </WrapPanel>
             </Border>
-            <Border></Border>
-            <Border></Border>
-            <Border></Border>
-            <Border></Border>
-            <Border></Border>
         </StackPanel>
     </Grid>
 </Page>
