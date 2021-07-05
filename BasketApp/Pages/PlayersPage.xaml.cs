@@ -43,8 +43,8 @@ namespace BasketApp.Pages
 
             GridPlayers.ItemsSource = context.PlayerInTeam.ToList();
 
-            SeasonNames.ItemsSource = context.Season.ToList();
-            TeamNames.ItemsSource = context.Team.ToList();
+            SeasonNames.ItemsSource = context.Season.OrderByDescending(season => season.Name).ToList();
+            TeamNames.ItemsSource = context.Team.OrderBy(team => team.TeamName).ToList();
             SeasonNames.SelectedIndex = 0;
             TeamNames.SelectedIndex = 0;
 
@@ -71,6 +71,7 @@ namespace BasketApp.Pages
             }
 
             //GridPlayers.ItemsSource = null;
+            players = players.OrderBy(players => players.ShirtNumber).ToList();
             GridPlayers.ItemsSource = players;
         }
 
