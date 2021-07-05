@@ -11,7 +11,8 @@ namespace BasketApp
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Windows.Media;
+
     public partial class Matchup
     {
         public int MatchupId { get; set; }
@@ -30,5 +31,41 @@ namespace BasketApp
         public virtual MatchupType MatchupType { get; set; }
         public virtual Team TeamAway { get; set; }
         public virtual Team TeamHome { get; set; }
+
+        public SolidColorBrush solidColorBrush
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case -1:
+                        return Brushes.LightBlue;
+                    case 0:
+                        return Brushes.Red;
+                    case 1:
+                        return Brushes.Gray;
+                    default:
+                        return Brushes.Green;
+                }
+            }
+        }
+
+        public string StatusMatchup 
+        { 
+            get
+            {
+                switch (Status)
+                {
+                    case -1:
+                        return "Not Start";
+                    case 0:
+                        return "Running";
+                    case 1:
+                        return "Finishing";
+                    default:
+                        return "???";
+                }
+            } 
+        }
     }
 }
