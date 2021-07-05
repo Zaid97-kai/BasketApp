@@ -92,13 +92,13 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn Header="No."></DataGridTextColumn>
+                <DataGridTextColumn Header="No." Binding="{Binding PlayerId}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Team"></DataGridTextColumn>
-                <DataGridTextColumn Header="Position"></DataGridTextColumn>
+                <DataGridTextColumn Header="Team" Binding="{Binding PlayerInTeam.Team.TeamName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Position" Binding="{Binding Position.Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Weight" Binding="{Binding Weight}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Height"></DataGridTextColumn>
-                <DataGridTextColumn Header="Experience"></DataGridTextColumn>
+                <DataGridTextColumn Header="Height" Binding="{Binding Height}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Experience" Binding="{Binding JoinYear}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Country" Binding="{Binding Country.CountryName}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
